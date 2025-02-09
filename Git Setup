@@ -1,0 +1,49 @@
+🚀 GitHub Setup Guide
+🛠 Basic Git Commands
+🔹 Clone a Repository
+git clone <repository-url>
+🔹 Add All Changes
+git add .
+🔹 Check the Status
+git status
+🔹 Commit Changes
+git commit -m "all file update code"
+________________________________________
+🔑 Setup Developer Permission to Push Code
+🔹 Set Remote Repository URL
+git remote set-url origin https://<your-access-token>@github.com/<username>/<repository>.git
+🔹 Push Changes to GitHub
+git push
+________________________________________
+🌿 Branch Management
+🔹 Create New Branches
+git checkout -b Dev
+git checkout -b Testing
+git checkout -b stg
+git checkout -b Prod
+🔹 Push All Branches to GitHub
+git push --all origin
+🔹 Switch Between Branches
+git switch dev
+________________________________________
+🔐 Setup SSH for GitHub
+🔹 Check Existing SSH Keys
+ls -al ~/.ssh
+🔹 Generate a New SSH Key
+ssh-keygen -t ed25519 -C "your-email@example.com"
+🔹 Start SSH Agent & Add Your Key
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+🔹 Add SSH Key to GitHub
+cat ~/.ssh/id_ed25519.pub
+Copy the key and add it to GitHub:
+•	Go to GitHub → Settings → SSH and GPG Keys
+•	Click "New SSH Key"
+•	Paste the key and save
+🔹 Test SSH Connection
+ssh -T git@github.com
+✅ If successful, you should see:
+Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
+________________________________________
+🎉 Congratulations! You have successfully set up GitHub with Git and SSH. 🚀
+
